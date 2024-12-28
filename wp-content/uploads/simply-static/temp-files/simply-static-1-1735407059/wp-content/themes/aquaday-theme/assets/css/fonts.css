@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProBlackAz.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProBlackItalicAz.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProBoldAz.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProBoldItalicAz.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProExtraLightAz.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProExtraLightItalicAz.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProLightAz.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProLightItalicAz.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProMediumAz.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProMediumItalicAz.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProRegularAz.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProRegularItalicAz.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProSemiBoldAz.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProSemiBoldItalicAz.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProUltraLightAz.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('https://aquaday.netlify.app/wp-content/themes/aquaday-theme/assets/fonts/SofiaProUltraLightItalicAz.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}

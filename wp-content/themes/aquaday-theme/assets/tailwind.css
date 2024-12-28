@@ -1,0 +1,633 @@
+/*
+Theme Name: Aquaday Tema WordPress
+Theme URI: 
+Author: Rodrigo Silva
+Author URI: 
+Description: Tema para la web aquaday.com
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aquaday-tema
+*/
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, .h1, 
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  p, .p {
+    @apply !font-sofia;
+  }
+  body {
+    @apply !font-sofia;
+  }
+}
+
+
+.menu {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+#menu-menu-principal{
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap:2rem;
+  li {
+    height: auto;
+
+    a{
+      @apply text-bg-secondary;
+      font-weight: 500;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+}
+
+#menu-menu2{
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap:0rem;
+
+  li {
+    width: 50%;
+    height: 100%;
+    flex:1;
+
+    a {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-content: center;
+      place-items: center;
+      text-decoration: none;
+      font-weight: 500;
+      color: white;
+      font-size: 17px;
+      text-transform: uppercase;
+    }
+ 
+  }
+
+  li:first-child {
+    @apply !bg-bg-secondary;
+  }
+  li:last-child{
+    @apply !bg-bg-primary;
+  }
+}
+
+
+.header-movil{
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: calc(100vh - 120px);
+  display: none;
+}
+@media (width > 985px){
+  .header-movil{
+    display: none;
+  }
+  .header {
+    display: flex;
+  }
+}
+
+
+
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  @apply text-bg-secondary;
+}
+.link:hover{
+  text-decoration: none;
+}
+
+.image-filter {
+filter: grayscale(69%) sepia(28%) saturate(162%) contrast(91%);
+-webkit-filter: grayscale(69%) sepia(28%) saturate(162%) contrast(91%);
+-moz-filter: grayscale(69%) sepia(28%) saturate(162%) contrast(91%);
+}
+
+.title-categories{
+  font-size: max(50px,min(calc(0.1736111111 * (100vw - 744px) + 50px),150px));
+  line-height: 1;
+}
+
+.categories-grid {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, max(400px, calc(50% - 40px))), 1fr));
+  gap: 40px;
+  display: grid;
+}
+
+.category-card {
+  box-shadow: 0px 0px 20px 0px rgba(186,186,186,0.25);
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 5rem);
+  .title-card {
+    text-transform: uppercase;
+    @apply text-texto-primary;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .image-card {
+    filter: drop-shadow(5px 5px 4px #a7a7a7);
+  }
+}
+
+.wrap-categorias {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.grid-products{
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, max(250px, calc(50% - 40px))), 1fr));
+  gap: 40px;
+  display: grid;
+}
+.product-card {
+  box-shadow: 0px 0px 20px 0px rgba(186,186,186,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  padding: 30px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+.link-card{
+  transition: all 0.2s ease;
+}
+.link-card:hover{
+  color: white;
+  @apply bg-bg-secondary;
+}
+
+.description-product {
+  ul {
+    li {
+      font-size: max(16px,min(calc(0.0069444444 * (100vw - 744px) + 20px),20px));
+      line-height: 1.4;
+      padding: 5px 0;
+    }
+  }
+  p {
+    font-size: max(16px,min(calc(0.0069444444 * (100vw - 744px) + 20px),20px));
+    line-height: 1.3;
+    padding: 5px 0;
+  }
+}
+
+.product-related-card {
+  box-shadow: 0px 0px 20px 0px rgba(186,186,186,0.25);
+  img {
+    transition: all 0.3s ease;
+  }
+}
+.product-related-card:hover {
+  img {
+    filter: drop-shadow(5px 5px 4px #a7a7a7);
+  }
+}
+
+.content-blog {
+  p {
+    font-size: max(16px,min(calc(0.0069444444 * (100vw - 744px) + 18px),19px));
+    line-height: 1.4;
+  }
+}
+
+/*SLDIER HOME*/
+.categories-slider {
+    overflow: visible;
+}
+
+.categories-slider .swiper-slide {
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--bg-primary);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.2rem !important;
+}
+
+.shadow-card{
+  box-shadow: 0px 0px 20px 0px rgba(186,186,186,0.25);
+}
+.shadow-img{
+   filter: drop-shadow(5px 5px 4px #a7a7a7);
+}
+.shadow-img-black{
+   filter: drop-shadow(5px 5px 4px #0f0f0f);
+}
+.animation-card-bg-slider::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background-image: var(--pattern-url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: top 1.2s cubic-bezier(0.19,1,0.22,1),opacity 0.8s cubic-bezier(0.19,1,0.22,1);
+    background-position: top;
+    
+}
+.animation-card-bg-slider {
+}
+.animation-card-bg-slider:hover {
+  @apply bg-bg-secondarysoft;
+  transition: all 0.4s ease;
+}
+
+
+
+.animation-card-bg-slider:hover::before {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.services-slider {
+    overflow: visible;
+    padding: 0 30px;
+}
+
+.services-slider .swiper-slide {
+    height: auto;
+}
+
+.services-slider .service-card {
+    height: 100%;
+    min-height: 300px;
+}
+
+
+/*AQUADAY*/
+.logo {
+  filter: invert(100%) brightness(0%);
+}
+.title-xl{
+  font-size: max(50px,min(calc(0.1 * (100vw - 744px) + 50px),100px));
+  line-height: 1;
+}
+.title-lg{
+  font-size: max(30px,min(calc(0.1 * (100vw - 744px) + 30px),48px));
+  line-height: 1;
+}
+.title-section {
+  font-size: max(26px,min(calc(0.1 * (100vw - 744px) + 26px),36px));
+  line-height: 1;
+  @apply text-texto-primary font-medium;
+}
+.title-card-product {
+  font-size: max(14px,min(calc(0.1 * (100vw - 744px) + 14px),15px));
+  line-height: 1.2;
+  @apply text-texto-primary;
+}
+.title-section-sm {
+  font-size: max(20px,min(calc(0.1 * (100vw - 744px) + 20px),28px));
+  line-height: 1;
+  @apply text-texto-primary font-medium;
+}
+.text-shadow{
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.247);
+}
+.paragraph-slider-home {
+  font-size: max(22px,min(calc(0.0069444444 * (100vw - 744px) + 22px),28px));
+}
+a, .link-no-underline {
+  text-decoration: none !important ;
+}
+.container {
+  @apply px-6 hd:px-10 max-w-[1250px] mx-auto;
+}
+.container-xl {
+  @apply px-10 hd:px-10 max-w-[1250px] mx-auto;
+}
+.section {
+  @apply pt-10 hd:pt-20 w-full
+}
+.section-p {
+  @apply py-10 hd:py-20 w-full
+}
+.paragraph {
+  font-size: max(16px,min(calc(0.0069444444 * (100vw - 744px) + 16px),18px));
+}
+.paragraph-sm {
+  font-size: max(15px,min(calc(0.0069444444 * (100vw - 744px) + 15px),16px));
+}
+
+/*PAGE NOSOTROS*/
+.div-year{
+  transform: translateX(-1vw);
+  transform: translateY(-10px);
+}
+.grid-galery-nosotros{
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, max(200px, calc(25% - 10px))), 1fr));
+  gap: 10px;
+  display: grid;
+}
+
+/*TIENDA*/
+.woocommerce-ordering {
+  select {
+    border-radius: 2rem;
+    padding: 0.5rem;
+    @apply text-texto-title
+  }
+}
+.woocommerce-pagination .page-numbers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: white;
+  padding: 4px;
+  border-radius: 999px;
+}
+
+.woocommerce-pagination .page-numbers li {
+  list-style: none;
+}
+
+.woocommerce-pagination .page-numbers a,
+.woocommerce-pagination .page-numbers span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.woocommerce-pagination .page-numbers a:hover {
+  background-color: #f3f4f6;
+}
+
+.woocommerce-pagination .page-numbers .current {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.woocommerce-pagination .next,
+.woocommerce-pagination .prev {
+  padding: 0 !important;
+  width: 32px !important;
+}
+
+.woocommerce-pagination .dots {
+  color: #666;
+}
+.ordering-container {
+  position: relative;
+}
+
+.woocommerce-ordering {
+  margin: 0;
+}
+
+.orderby {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234B5563'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.orderby:focus {
+  outline: none;
+}
+
+.orderby option {
+  padding: 0.5rem;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon .count {
+  transition: all 0.3s ease;
+}
+
+.add_to_cart_button.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.notification {
+  z-index: 1000;
+  animation: slideIn 0.3s ease;
+}
+
+.notification.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.notification.error {
+  background-color: #f44336;
+  color: white;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*CARRITO SDIEBAR*/
+#cart-sidebar {
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Animación de entrada/salida */
+.translate-x-full {
+    transform: translateX(100%);
+}
+
+/*PRODUCTO INDIVIDUAL*/
+.product-short-description{
+  p {
+    @apply text-texto-paragraph my-2;
+  }
+}
+.gallery-slider {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery-slider .shrink-0 {
+  flex: 0 0 100%;
+}
+
+.gallery-slider img {
+  width: 100%;
+  height: auto;
+}
+.added_to_cart{
+  display: none !important;
+}
+/*MENU TIENDA*/
+.menu-tienda{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+
+}
+#menu-tienda{
+   width: auto !important;
+   text-transform: capitalize;
+  @apply bg-bg-primary rounded-lg p-2 px-4 text-white hover:text-white;
+
+}
+/*SUBMENU*/
+/* Estilos para el menú y submenús */
+.menu-item {
+    position: static;
+}
+
+.menu-item li {
+    position: relative;
+}
+
+.menu-item .submenu {
+    z-index: 50;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item .group:hover .submenu {
+    transform: translateY(0);
+}
+
+/* Estilos para submenús anidados (tercer nivel) */
+.menu-item .submenu .submenu {
+    left: 100%;
+    top: 0;
+}
+
+/* Efecto hover en los items del menú */
+.menu-item a:hover {
+    color: #3b82f6; /* Color primario de Tailwind */
+}
+
+/* Ajuste para el dropdown arrow */
+.menu-item .group > a {
+    display: flex;
+    align-items: center;
+}
+
+/* Animación del arrow */
+.menu-item .group:hover > a svg {
+    transform: rotate(-180deg);
+}
+
+.menu-item svg {
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Aseguramos que los submenús no se corten */
+.menu-item {
+    overflow: visible !important;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu-items ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu-items li {
+    padding: 0.5rem 0;
+}
+
+.mobile-menu-items a {
+    display: block;
+    padding: 0.5rem;
+    color: #374151;
+    transition: all 0.2s;
+}
+
+.mobile-menu-items a:hover {
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+}
+
+/* Estilos para la transición del header */
+#main-header {
+    transition: all 0.3s ease-in-out;
+}
+
+#main-header.fixed {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+/*MENU BURGUER*/
+.burguer {
+  @apply block hd:hidden;
+}
